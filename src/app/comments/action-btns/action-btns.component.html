@@ -1,0 +1,17 @@
+<div class="actions">
+  <div class="btns">
+    <div (click)="likeDislike('like')" [ngClass]="{'like': liked}">
+      Like
+    </div>
+    <div (click)="likeDislike('dislike')" [ngClass]="{'dislike': disliked}">
+      Dislike
+    </div>
+    <div (click)="reply()">
+      Reply
+    </div>
+  </div>
+  <div class="text-area" *ngIf="showCommentBox">
+    <app-comment-box [entity]="entity" [content]="commentContent" (closeComment)="toggleComment($event)">
+    </app-comment-box>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<button (click)="onLogin()">Login</button>
+
+<div id="id01" class="modal">
+  <form class="modal-content" #f="ngForm" (ngSubmit)="login(f)" ngNativeValidate>
+    <div class="close-btn">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+      <label>Email/Phone</label>
+      <input type="text" id="email" name="email" ngModel placeholder="Enter email/phone" required>
+
+      <label>Password</label>
+      <input type="password" id="password" name="password" ngModel placeholder="Enter password" required>
+
+      <button type="submit" class="add-btn">Login</button>
+    </div>
+  </form>
+</div>

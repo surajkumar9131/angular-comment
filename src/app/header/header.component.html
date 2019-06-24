@@ -1,0 +1,11 @@
+<header>
+  <div>
+    comments
+  </div>
+  <div>
+    <app-login-modal *ngIf="!loggedIn"></app-login-modal>
+    <button *ngIf="loggedIn" (click)="logOut()">
+      Logout
+    </button>
+  </div>
+</header>

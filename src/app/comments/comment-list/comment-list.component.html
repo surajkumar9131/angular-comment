@@ -1,0 +1,12 @@
+<div class="comments" *ngFor="let comment of commentList">
+  <app-comment [comment]="comment"></app-comment>
+  <app-action-btns [entity]="'sub_comment'" [commentContent]="comment" [content]="comment"></app-action-btns>
+  <div class="sub-comment" *ngFor="let sub_comment of comment.sub_comment">
+    <app-comment [comment]="sub_comment"></app-comment>
+    <app-action-btns [entity]="'reply'" [commentContent]="sub_comment" [content]="sub_comment"></app-action-btns>
+    <div class="reply" *ngFor="let reply of sub_comment.reply">
+      <app-comment [comment]="reply"></app-comment>
+      <app-action-btns [entity]="'reply'" [commentContent]="sub_comment" [content]="reply"></app-action-btns>
+    </div>
+  </div>
+</div>

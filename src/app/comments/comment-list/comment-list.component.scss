@@ -1,0 +1,8 @@
+.comments {
+  &>.sub-comment {
+    margin-left: 28px;
+    &>.reply {
+      margin-left: 28px;
+    }
+  }
+}
